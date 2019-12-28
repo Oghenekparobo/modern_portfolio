@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 
 
 * {
@@ -30,12 +31,14 @@ h3 {
 
     &.lg-heading {
         font-size: 4rem;
+        z-index: -1;
     }
 
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, $background-opacity), 0.5)
+        background: rgba(lighten($primary-color, $background-opacity), 0.5);
+        z-index: -4;
     }
 }
 
