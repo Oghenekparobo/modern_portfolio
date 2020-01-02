@@ -233,6 +233,38 @@ main .icons a:hover {
   padding: 1.5rem;
   border-bottom: #eece1a 5px solid; }
 
+.projects {
+  display: grid;
+  grid-gap: 0.7em;
+  grid-template-columns: repeat(3, 1fr); }
+
+img {
+  width: 100%;
+  border: 3px white solid; }
+
+img:hover {
+  opacity: 0.5;
+  border-color: #eece1a;
+  transition: all 0.7s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+
+.btn:hover, .btn-dark:hover, .btn-light:hover {
+  background: #eece1a;
+  color: #eece1a; }
+
+.btn-dark {
+  background: black;
+  color: white; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -240,7 +272,17 @@ main .icons a:hover {
   color: #444;
   height: 60px; }
 
+@media screen and (min-width: 500px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
 @media screen and (max-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr); }
   main {
     align-items: center;
     text-align: center; }
@@ -270,5 +312,7 @@ main .icons a:hover {
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
+  .projects {
+    grid-template-columns: 1fr; }
   main#home h1 {
     margin-top: 10vh; } }
